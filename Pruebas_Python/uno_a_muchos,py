@@ -1,0 +1,27 @@
+class Auto():
+    def __init__(self, modelo, año):
+        self.modelo = modelo
+        self.año = año
+
+a1 = Auto("Honda Civic", 2023)
+
+class Persona():
+    def __init__(self,nombre,apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.autos = []
+
+    def agregarAuto(self,auto):
+        self.autos.append(auto)
+
+    def getAutos(self):
+        return self.autos
+    
+    def setAutos(self, autos):
+        self.autos = autos
+
+p1 = Persona("Juan", "Perez")
+
+p1.agregarAuto(a1)
+
+print (p1.autos[0].modelo, p1.autos[0].año)
